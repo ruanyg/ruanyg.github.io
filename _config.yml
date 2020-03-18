@@ -103,4 +103,4 @@ deploy:
   branch: master
   extend_dirs: /
   ignore_pattern:
-    /: (node_modules)|(scaffolds)
+    /: ^(CNAME)
