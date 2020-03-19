@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo-theme-next主题使用</title>
+    <url>/2020/03/19/hexo-theme-next%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="更改语言"><a href="#更改语言" class="headerlink" title="更改语言"></a>更改语言</h3><p>查看hexo站点根目录/themes/next/languages</p>
+]]></content>
+  </entry>
+  <entry>
     <title>zsh安装与使用</title>
     <url>/2020/03/18/zsh/</url>
     <content><![CDATA[<h3 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh-my-zsh"></a>安装oh-my-zsh</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</span><br></pre></td></tr></table></figure>
@@ -28,9 +34,9 @@
 <h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><p>新建本地项目hexo-blog，执行下述命令自动构建hexo项目</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
-<h3 id="主题引入"><a href="#主题引入" class="headerlink" title="主题引入"></a>主题引入</h3><p>主题官网为：<a href="https://hexo.io/themes" target="_blank" rel="noopener">https://hexo.io/themes</a><br>以引入NexT主题为例，进入hexo项目的themes文件夹下</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git</span><br></pre></td></tr></table></figure>
-<p>在hexo项目根目录下找到_config.xml，将theme属性改为hexo-theme-next</p>
+<h3 id="主题引入"><a href="#主题引入" class="headerlink" title="主题引入"></a>主题引入</h3><p>主题官网为：<a href="https://hexo.io/themes" target="_blank" rel="noopener">https://hexo.io/themes</a><br>以引入NexT主题为例，进入hexo项目根目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>在hexo项目根目录下找到_config.xml，将theme属性改为next</p>
 <h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>编辑_config.xml，</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:ruanyg&#x2F;ruanyg.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>安装hexo-deployer-git，用来帮助我们把博客项目推到仓库上</p>
@@ -45,15 +51,14 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">"dev": "hexo s",</span><br><span class="line">"build": "hexo clean &amp; hexo deploy"</span><br></pre></td></tr></table></figure>
 
 <h3 id="hexo-deployer-git高级使用技巧"><a href="#hexo-deployer-git高级使用技巧" class="headerlink" title="hexo-deployer-git高级使用技巧"></a>hexo-deployer-git高级使用技巧</h3><ul>
-<li>将hexo项目根目录下的CNAME文件上传到github仓库  <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:ruanyg/ruanyg.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  extend_dirs: /</span><br><span class="line">  ignore_pattern:</span><br><span class="line">    /: (node_modules)|(scaffolds)|(source)|(themes)|(public)|(_config.yml)|(db.json)|(package-lock.json)|(package.json)</span><br></pre></td></tr></table></figure></li>
+<li>将hexo项目根目录下的CNAME文件上传到github仓库  <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:ruanyg/ruanyg.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  extend_dirs: /</span><br><span class="line">  ignore_pattern:</span><br><span class="line">    /: (node_modules)|(scaffolds)|(source)|(themes)|(public)|(_config.yml)|(db.json)|(package-lock.json)|(package.json)</span><br></pre></td></tr></table></figure>
+  这里只做演示用，实际情况可以把CNAME文件放到source文件夹下</li>
 <li>将源文件和生成的页面文件分别推送到不同的分支  <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: git</span><br><span class="line">    repo: git@github.com:ruanyg/ruanyg.github.io.git</span><br><span class="line">    branch: master</span><br><span class="line">  - type: git</span><br><span class="line">    repo: git@github.com:ruanyg/ruanyg.github.io.git</span><br><span class="line">    branch: src</span><br><span class="line">    extend_dirs: /</span><br><span class="line">    ignore_hidden: false</span><br><span class="line">    ignore_pattern:</span><br><span class="line">        public: .</span><br></pre></td></tr></table></figure></li>
 <li>参考资料：<a href="https://www.npmjs.com/package/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git文档</a></li>
 </ul>
 <h3 id="接入评论系统-valine"><a href="#接入评论系统-valine" class="headerlink" title="接入评论系统 - valine"></a>接入评论系统 - valine</h3><p><a href="https://valine.js.org/quickstart.html" target="_blank" rel="noopener">https://valine.js.org/quickstart.html</a></p>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
 <li><a href="https://www.jianshu.com/p/683a120c6264" target="_blank" rel="noopener">映射域名</a></li>
-<li><a href="https://www.jianshu.com/p/37769040891f" target="_blank" rel="noopener">hexo-theme-next主题设置</a></li>
-<li><a href="https://blog.csdn.net/mqdxiaoxiao/article/details/93251246" target="_blank" rel="noopener">hexo-theme-next主题更改语言</a></li>
 </ul>
 ]]></content>
   </entry>
