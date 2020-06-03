@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>SpringCloud构建微服务架构电商商城项目</title>
+    <url>/2020/06/03/SpringCloud%E6%9E%84%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%94%B5%E5%95%86%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE/</url>
+    <content><![CDATA[<h3 id="主要项目介绍"><a href="#主要项目介绍" class="headerlink" title="主要项目介绍"></a>主要项目介绍</h3><ul>
+<li>cmall：后台服务</li>
+<li>cmall-admin-web：admin后台</li>
+<li>cmall-login-web：单点登录</li>
+<li>cmall-mall-web：商城web</li>
+</ul>
+<h3 id="项目启动顺序"><a href="#项目启动顺序" class="headerlink" title="项目启动顺序"></a>项目启动顺序</h3><p>CmallEurekaApplication -&gt; CmallUacApplication -&gt; CmallGatewayApplication -&gt; 其他项目<br><img src="images/image-20200602210224733.png" alt="image-20200602210224733"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo-theme-next主题使用</title>
     <url>/2020/03/19/hexo-theme-next%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h3 id="更改语言"><a href="#更改语言" class="headerlink" title="更改语言"></a>更改语言</h3><p>查看hexo站点根目录/themes/next/languages文件夹下看支持哪些语言，发现中文有如下三种</p>
