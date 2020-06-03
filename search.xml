@@ -1,6 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>PicGo+Gitee搭建图床供Typora使用</title>
+    <url>/2020/06/03/PicGo+Gitee%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%E4%BE%9BTypora%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="Typora配置及PicGo下载安装"><a href="#Typora配置及PicGo下载安装" class="headerlink" title="Typora配置及PicGo下载安装"></a>Typora配置及PicGo下载安装</h3><h4 id="Typora偏好设置中"><a href="#Typora偏好设置中" class="headerlink" title="Typora偏好设置中"></a>Typora偏好设置中</h4><ul>
+<li>插入图片时动作设置为上传图片</li>
+<li>勾选上<strong>对本地位置的图片应用上述规则</strong>及<strong>对网络位置的图片应用上述规则</strong>两个选项</li>
+<li>上传服务选择PicGo.app</li>
+</ul>
+<p><img src="https://gitee.com/ruanyg/picbed/raw/master/images/image-20200603142813419.png" alt="image-20200603142813419"></p>
+<ul>
+<li>点击<strong>下载 PicGo.app</strong>按钮下载安装PicGo</li>
+</ul>
+<h3 id="gitee相关操作"><a href="#gitee相关操作" class="headerlink" title="gitee相关操作"></a>gitee相关操作</h3><h4 id="创建图床库"><a href="#创建图床库" class="headerlink" title="创建图床库"></a>创建图床库</h4><ol>
+<li>新建仓库</li>
+</ol>
+<p><img src="https://gitee.com/ruanyg/picbed/raw/master/images/image-20200603145059760.png" alt="image-20200603145059760"></p>
+<ol start="2">
+<li><p>将仓库设为公开</p>
+</li>
+<li><p>勾选使用Readme文件初始化这个仓库</p>
+</li>
+</ol>
+<p><img src="https://gitee.com/ruanyg/picbed/raw/master/images/image-20200603145249063.png" alt="image-20200603145249063"></p>
+<h4 id="生成私人令牌（token）"><a href="#生成私人令牌（token）" class="headerlink" title="生成私人令牌（token）"></a>生成私人令牌（token）</h4><ol>
+<li><p>点击头像，进入设置<br><img src="https://gitee.com/ruanyg/picbed/raw/master/images/image-20200603145801827.png" alt="image-20200603145801827"></p>
+</li>
+<li><p>找到右边安全设置里面的私人令牌<br><img src="https://gitee.com/ruanyg/picbed/raw/master/images/image-20200603145859773.png" alt="image-20200603145859773"></p>
+</li>
+<li><p>点击<code>生成新令牌</code>，把<strong>projects</strong>这一项勾上，其他的不用勾，然后提交<br><img src="https://gitee.com/ruanyg/picbed/raw/master/images/image-20200603145957621.png" alt="image-20200603145957621"></p>
+<p>这里需要验证一下密码，验证密码之后会出来一串数字，这一串数字就是你的token，将这串数字复制到刚才的配置里面去。</p>
+</li>
+</ol>
+<p><img src="https://gitee.com/ruanyg/picbed/raw/master/images/image-20200603150121966.png" alt="image-20200603150121966"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">注意：这个令牌只会明文显示一次，建议在配置插件的时候再来生成令牌，直接复制进去，搞丢了又要重新生成一个。</span><br></pre></td></tr></table></figure>
+
+<h3 id="PicGo配置"><a href="#PicGo配置" class="headerlink" title="PicGo配置"></a>PicGo配置</h3><ul>
+<li>PicGo插件设置中搜索gitee插件并安装（这里需要注意必须要先安装<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fnodejs.org%2Fen%2F" target="_blank" rel="noopener">node.js</a>才能安装插件）</li>
+</ul>
+<p><img src="https://gitee.com/ruanyg/picbed/raw/master/images/image-20200603143637694.png" alt="image-20200603143637694"></p>
+<ul>
+<li><p>对图床设置中的gitee进行配置</p>
+<ul>
+<li>repo：用户名/仓库名称</li>
+<li>branch：分支，这里写上master</li>
+<li>token：填入码云的私人令牌</li>
+<li>path：路径，一般写上images</li>
+<li>customPath：提交消息，这一项和下一项customURL都不用填。在提交到码云后，会显示提交消息，插件默认提交的是 <code>Upload 图片名 by picGo - 时间</code></li>
+<li>点击确定进行保存，并点击设为默认图库</li>
+</ul>
+<p><img src="https://gitee.com/ruanyg/picbed/raw/master/images/image-20200603144238249.png" alt="image-20200603144238249"></p>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo-theme-next主题使用</title>
     <url>/2020/03/19/hexo-theme-next%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h3 id="更改语言"><a href="#更改语言" class="headerlink" title="更改语言"></a>更改语言</h3><p>查看hexo站点根目录/themes/next/languages文件夹下看支持哪些语言，发现中文有如下三种</p>
